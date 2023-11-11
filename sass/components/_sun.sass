@@ -1,0 +1,5 @@
+@use "../abstracts/_all" as abstracts
+
+.sun
+    @include abstracts.circle(abstracts.$sun-size)
+    @include abstracts.animation-rotate(9s)

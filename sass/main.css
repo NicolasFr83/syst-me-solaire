@@ -1,0 +1,135 @@
+@charset "UTF-8";
+/* MAIN.sass
+ *
+ * Fichier principal qui va importer les autres fichiers.  
+ * Stucture 7 - 1 = un fichier qui gère 7 dossiers. 
+ * L'ordre des imports : 
+ * - reset
+ * - vendors
+ * - pages
+ * - themes
+ * - layout
+ * - components*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* TAILLE DES PLANÈTES
+ *
+ * taille de la terre c'est 100px de diamètre
+ * calculer la taille des autres : 
+ * mercure : 2.6 plus petite
+ * venus : 1.1 plus petite
+ * */
+.galaxy {
+  background-color: black;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  gap: 40px;
+  margin-left: calc(50vw - 100px);
+}
+
+.planet {
+  border-radius: 100%;
+  width: 150px;
+  height: 150px;
+  flex-shrink: 0;
+}
+.planet--mercury {
+  border-radius: 100%;
+  width: 38.4615384615px;
+  height: 38.4615384615px;
+  flex-shrink: 0;
+  animation: animation-rotate 5s linear infinite;
+}
+.planet--venus {
+  border-radius: 100%;
+  width: 90.9090909091px;
+  height: 90.9090909091px;
+  flex-shrink: 0;
+  animation: animation-rotate 5s linear infinite;
+}
+.planet--earth {
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  position: relative;
+  animation: animation-rotate 5s linear infinite;
+}
+.planet--mars {
+  border-radius: 100%;
+  width: 52.6315789474px;
+  height: 52.6315789474px;
+  flex-shrink: 0;
+  position: relative;
+  animation: animation-rotate 5s linear infinite;
+}
+.planet--jupiter {
+  border-radius: 100%;
+  width: 700px;
+  height: 700px;
+  flex-shrink: 0;
+  animation: animation-rotate 15s linear infinite;
+}
+.planet--saturn {
+  border-radius: 100%;
+  width: 550px;
+  height: 550px;
+  flex-shrink: 0;
+  animation: animation-rotate 10s linear infinite;
+}
+.planet--uranus {
+  border-radius: 100%;
+  width: 400px;
+  height: 400px;
+  flex-shrink: 0;
+  animation: animation-rotate 8s linear infinite;
+}
+.planet--neptune {
+  border-radius: 100%;
+  width: 390px;
+  height: 390px;
+  flex-shrink: 0;
+  animation: animation-rotate 8s linear infinite;
+}
+
+.sun {
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+  animation: animation-rotate 9s linear infinite;
+}
+
+.satellite, .satellite--pheimos, .satellite--deimos, .satellite--moon {
+  background: white;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  translate: -50% -50%;
+}
+.satellite--moon {
+  background-color: grey;
+}
+.satellite--deimos {
+  background-color: orange;
+}
+.satellite--pheimos {
+  background-color: white;
+}
+
+@keyframes animation-rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=main.css.map */
